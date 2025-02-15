@@ -88,8 +88,7 @@ public class VastParserImpl implements VastParser {
     }
 
 
-    // parse tag version
-    public String parseVastTagVersion(String xmlString) throws IOException, SAXException, ParserConfigurationException {
+    private String parseVastTagVersion(String xmlString) throws IOException, SAXException, ParserConfigurationException {
         Document document = builder.parse(new ByteArrayInputStream(xmlString.getBytes()));
 
         NodeList nodeList = document.getElementsByTagName("VAST");
@@ -99,7 +98,7 @@ public class VastParserImpl implements VastParser {
         return element.getAttribute("version");
     }
 
-    public String parseId(String xmlString) throws IOException, SAXException {
+    private String parseId(String xmlString) throws IOException, SAXException {
         Document document = builder.parse(new ByteArrayInputStream(xmlString.getBytes()));
 
         NodeList nodeList = document.getElementsByTagName("Ad");
@@ -109,7 +108,7 @@ public class VastParserImpl implements VastParser {
         return element.getAttribute("id");
     }
 
-    public String parseTitle(String xmlString) throws IOException, SAXException {
+    private String parseTitle(String xmlString) throws IOException, SAXException {
         Document document = builder.parse(new ByteArrayInputStream(xmlString.getBytes()));
 
         NodeList nodeList = document.getElementsByTagName("AdTitle");
@@ -119,7 +118,7 @@ public class VastParserImpl implements VastParser {
         return element.getTextContent().strip();
     }
 
-    public String parseDescription(String xmlString) throws IOException, SAXException {
+    private String parseDescription(String xmlString) throws IOException, SAXException {
         Document document = builder.parse(new ByteArrayInputStream(xmlString.getBytes()));
 
         NodeList nodeList = document.getElementsByTagName("Description");
@@ -130,7 +129,7 @@ public class VastParserImpl implements VastParser {
         return element.getTextContent().strip();
     }
 
-    public Impression parseImpression(String xmlString) throws IOException, SAXException {
+    private Impression parseImpression(String xmlString) throws IOException, SAXException {
         Document document = builder.parse(new ByteArrayInputStream(xmlString.getBytes()));
 
         NodeList nodeList = document.getElementsByTagName("Impression");
@@ -144,7 +143,7 @@ public class VastParserImpl implements VastParser {
         return new Impression(idValue, urlValue);
     }
 
-    public List<Creative> parseCreatives(String xmlString) throws IOException, SAXException {
+    private List<Creative> parseCreatives(String xmlString) throws IOException, SAXException {
         Document document = builder.parse(new ByteArrayInputStream(xmlString.getBytes()));
         document.getDocumentElement().normalize();
         NodeList creativeNodes = document.getElementsByTagName("Creative");
