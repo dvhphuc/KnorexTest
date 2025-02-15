@@ -14,3 +14,6 @@ Ensure you have the following installed on your system:
 
 2. **Open pom.xml**
    Navigate to the project's root directory and open the pom.xml file to verify dependencies.
+
+## Kindly Note
+Since I have no experience with MongoDB and have only worked with RDBMS so far, I will skip question 4 in the test.
