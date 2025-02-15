@@ -16,6 +16,8 @@ public class Main {
         // Output:
         // Parse the xml into JSON
 
+        // Note: I haven't worked with MongoDB yet; my experience has been with RDBMS. So, I skipped question 4 during the exam.
+
         FileVastReader fileVastReader = new FileVastReader();
         UrlVastReader urlVastReader = new UrlVastReader();
         PathOrUrlDetector detector = new PathOrUrlDetector();
