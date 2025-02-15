@@ -17,3 +17,8 @@ Ensure you have the following installed on your system:
 
 ## Kindly Note
 Since I have no experience with MongoDB and have only worked with RDBMS so far, I will skip question 4 in the test.
+My implementation idea for the test:
+- Create two classes responsible for reading XML content: one for reading from a file path and another for reading from a URL. These classes receive the data source path and return the XML content as a string.
+- Create a parser class that takes an XML string as input and returns the target model. Each target XML tag has a specific method for handling it, ensuring a structured implementation.
+- Create an exporter class responsible for converting the target model into a JSON string.
+- The unit test will be skipped because lacking of time.
