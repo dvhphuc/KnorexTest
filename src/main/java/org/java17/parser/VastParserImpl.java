@@ -167,7 +167,7 @@ public class VastParserImpl implements VastParser {
                 String type = staticResourceElement.getAttribute("creativeType");
                 String imageUrl = companionElement.getElementsByTagName("StaticResource").item(0).getTextContent().trim();
                 String clickThroughUrl = companionElement.getElementsByTagName("CompanionClickThrough").item(0).getTextContent().trim();
-                creative.setCompanyBanner(new CompanyBanner(id, width, height, null, imageUrl, clickThroughUrl));
+                creative.setCompanyBanner(new CompanyBanner(id, width, height, type, imageUrl, clickThroughUrl));
             }
 
             // Process Duration if present
